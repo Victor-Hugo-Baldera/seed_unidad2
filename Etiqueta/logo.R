@@ -51,7 +51,7 @@ label %>%
 
 
 sticker <- label %>% 
-  label_print(filename = "pts.p"
+  label_print(filename = "pts"
               , margin = 0
               , paper = c(5.5, 5.5)
               , mode = "complete"
