@@ -249,8 +249,8 @@ gsp
 ## Grid plots
 
 ```{r}
-plot01 <- image_read("Analisis/por_germinacion.jpeg") %>% grid::rasterGrob()
-plot02 <- image_read("Analisis/Procentaje_ger.jpeg") %>% grid::rasterGrob()
+plot02 <- image_read("Analisis/por_germinacion.jpeg") %>% grid::rasterGrob()
+plot01 <- image_read("Analisis/Procentaje_ger.jpeg") %>% grid::rasterGrob()
 
 ```
 
@@ -260,16 +260,12 @@ plot02 <- image_read("Analisis/Procentaje_ger.jpeg") %>% grid::rasterGrob()
 
 top <- list(plot01, plot02) %>% 
   plot_grid(plotlist = ., labels = "AUTO", label_x = 0.08, label_y = 0.8)
+
 top
 
 
-top %>% ggsave2(plot= .
-                 , filename = "Analisis/grid-01."
-                 , units = "cm"
-                 , width = 20
-                 , height = 20
-                 , )
+save_plot("Analisis/grid.jpeg", top, base_width = 20, base_height = 10, dpi = 300)
 
-top```
+```
 
 
